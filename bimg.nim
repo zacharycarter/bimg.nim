@@ -68,12 +68,12 @@ when isMainModule:
     size = getFileSize(f)
     data: seq[uint8]
 
-newSeq(data, size)
+  newSeq(data, size)
 
-echo readBytes(f, data, 0, size)
-close(f)
+  echo readBytes(f, data, 0, size)
+  close(f)
 
-ic = imageParse(cast[ptr AllocatorI](addr allocator), cast[pointer](addr data[0]), uint32(len(data)), R16, nil)
-echo ic[].m_width
-echo ic[].m_height
-echo ic[].m_numMips
+  ic = imageParse(cast[ptr AllocatorI](addr allocator), cast[pointer](addr data[0]), uint32(len(data)), R16, nil)
+  echo ic[].m_width
+  echo ic[].m_height
+  echo ic[].m_numMips
