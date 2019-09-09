@@ -52,6 +52,15 @@ type
   AllocatorI {.header: "<bx/allocator.h>", importcpp: "bx::AllocatorI".} = object
   DefaultAllocator {.header: "<bx/allocator.h>", importcpp: "bx::DefaultAllocator".} = object
   Error {.header: "<bx/bx.h>", importcpp: "bx::Error".} = ref object
+  Orientation* {.header: "<bimg/bimg.h>", importcpp: "bimg::Orientation::Enum".} = enum
+    R0
+    R90
+    R180
+    R270
+    HFlip
+    HFlipR90
+    HFlipR270
+    VFlip
   TextureFormat* {.header: "<bimg/bimg.h>", importcpp: "bimg::TextureFormat::Enum".} = enum
     BC1           #!< DXT1
     BC2          #!< DXT3
